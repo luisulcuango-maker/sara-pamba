@@ -1,0 +1,182 @@
+/* ===== ESTILOS ESPECÍFICOS PARA PUNTO DE VENTA ===== */
+
+/* Estilos para el carrito */
+.cart-item {
+    background: var(--stone-50);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--secondary);
+    margin-bottom: 0.75rem;
+    transition: all var(--transition-normal);
+}
+
+.cart-item:hover {
+    background: var(--stone-100);
+    transform: translateX(5px);
+}
+
+.cart-item .btn-outline-danger {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Estilos para productos */
+.product-card {
+    border: 2px solid transparent;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
+}
+
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Filtro de categorías */
+.filter-section {
+    min-width: 200px;
+}
+
+#filtro-categoria {
+    border: 2px solid var(--stone-300);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    transition: all var(--transition-normal);
+}
+
+#filtro-categoria:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
+}
+
+/* Sección de efectivo */
+#efectivo-section {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.9) 0%, rgba(233, 236, 239, 0.9) 100%);
+    border: 2px solid var(--stone-200);
+    border-radius: 10px;
+    transition: all var(--transition-normal);
+}
+
+#efectivo-section:hover {
+    border-color: var(--secondary);
+    background: linear-gradient(135deg, rgba(248, 249, 250, 1) 0%, rgba(233, 236, 239, 1) 100%);
+}
+
+.cambio-info {
+    background: linear-gradient(135deg, rgba(212, 237, 218, 0.9) 0%, rgba(195, 230, 203, 0.9) 100%);
+    border: 1px solid #b1dfbb;
+    border-radius: 6px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Total section */
+.total-section {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(30, 126, 52, 0.05) 100%);
+    border: 2px solid var(--success);
+    border-radius: 10px;
+}
+
+/* Modal de pago */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--warning) 0%, #e0a800 100%);
+    color: white;
+    border-bottom: none;
+}
+
+.modal-body .alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border: 2px solid #155724;
+    color: #155724;
+}
+
+.modal-body .alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border: 2px solid #721c24;
+    color: #721c24;
+}
+
+/* Botones específicos del POS */
+.btn-block {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all var(--transition-normal);
+}
+
+.btn-block:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Estilos para input de efectivo */
+.input-group-text {
+    background: linear-gradient(135deg, var(--stone-100) 0%, var(--stone-200) 100%);
+    border: 2px solid var(--stone-300);
+    border-right: none;
+    font-weight: 600;
+}
+
+#efectivo_recibido {
+    border: 2px solid var(--stone-300);
+    border-left: none;
+    transition: all var(--transition-normal);
+}
+
+#efectivo_recibido:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
+}
+
+/* Responsive para POS */
+@media (max-width: 992px) {
+    .admin-main {
+        padding: 1rem;
+    }
+    
+    .crud-container {
+        padding: 1rem;
+    }
+    
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    
+    .filter-section {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        padding: 0.75rem;
+    }
+    
+    .product-card .card-body {
+        padding: 1rem;
+    }
+    
+    #efectivo-section {
+        padding: 1rem !important;
+    }
+}
